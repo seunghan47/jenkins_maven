@@ -8,5 +8,10 @@ pipeline {
                 sh 'sleep 10s'
             }
         }
+        stage ('build mvn') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
     }
 }
