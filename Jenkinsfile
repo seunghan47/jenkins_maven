@@ -1,9 +1,10 @@
 pipeline {
     agent any
-    trigger { pollSCM '*/1 * * * *'}
+    trigger { pollSCM '*/1 * * * *' }
     stages {
-        stage ('Testing configuration')
-        echo 'hello world'
-        sh 'sleep 10s'
+        stage ('Testing configuration') {
+            echo 'hello world'
+            sh 'sleep 10s'
+        }
     }
 }
